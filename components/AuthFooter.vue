@@ -47,7 +47,7 @@ export default {
       display: flex
       align-items: center
       +md
-        margin-top: 24px
+        margin-top: 16px
     &__social
       &:not(:last-child)
         margin-right: 20px
@@ -68,6 +68,7 @@ export default {
       line-height: 20px
       color: $gray
       +lg
+        line-height: 18px
         &:not(:last-child)
           margin-bottom: 8px
       &_white

@@ -6,7 +6,8 @@
           <img src="/images/logo.svg" alt="">
         </nuxt-link>
 
-        <main-button color="primary" label="Регистрация" />
+        <main-button to="/sign-up" v-if="isSingIn" tag="a" color="primary" label="Регистрация" />
+        <main-button to="/sign-in" v-if="!isSingIn" tag="a" color="primary" label="Вход" />
       </div>
     </b-container>
   </header>
@@ -16,7 +17,13 @@
 import MainButton from '~/components/MainButton'
 export default {
   name: 'AuthTopMenu',
-  components: { MainButton }
+  components: { MainButton },
+  props: {
+    isSingIn: {
+      type: Boolean,
+      default: () => false
+    }
+  }
 }
 </script>
 

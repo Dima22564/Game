@@ -8,11 +8,11 @@
           </nuxt-link>
 
           <div class="header__links">
-            <nuxt-link to="/" tag="div" class="header__link">Продавцам</nuxt-link>
-            <nuxt-link to="/" tag="div" class="header__link">Покупателям</nuxt-link>
-            <nuxt-link to="/" tag="div" class="header__link">Оплата</nuxt-link>
-            <nuxt-link to="/" tag="div" class="header__link">Гарантии</nuxt-link>
-            <nuxt-link to="/" tag="div" class="header__link">Стать партнером</nuxt-link>
+            <nuxt-link to="/" class="header__link">Продавцам</nuxt-link>
+            <nuxt-link to="/" class="header__link">Покупателям</nuxt-link>
+            <nuxt-link to="/" class="header__link">Оплата</nuxt-link>
+            <nuxt-link to="/" class="header__link">Гарантии</nuxt-link>
+            <nuxt-link to="/" class="header__link">Стать партнером</nuxt-link>
           </div>
 
           <div class="header__actions">
@@ -35,13 +35,13 @@
 
         <div class="header__line">
           <div class="header__links">
-            <nuxt-link exact tag="div" to="/" class="header__link header__link_bold">Игры</nuxt-link>
-            <nuxt-link exact tag="div" to="/" class="header__link header__link_bold">Софт</nuxt-link>
-            <nuxt-link exact tag="div" to="/" class="header__link header__link_bold">Скины</nuxt-link>
-            <nuxt-link exact tag="div" to="/" class="header__link header__link_bold">Кейсы</nuxt-link>
-            <nuxt-link exact tag="div" to="/" class="header__link header__link_bold">GiftCard</nuxt-link>
-            <nuxt-link exact tag="div" to="/" class="header__link header__link_bold">Новости</nuxt-link>
-            <nuxt-link exact tag="div" to="/" class="header__link header__link_bold">Отзывы</nuxt-link>
+            <nuxt-link exact to="/" class="header__link header__link_bold">Игры</nuxt-link>
+            <nuxt-link exact to="/" class="header__link header__link_bold">Софт</nuxt-link>
+            <nuxt-link exact to="/" class="header__link header__link_bold">Скины</nuxt-link>
+            <nuxt-link exact to="/" class="header__link header__link_bold">Кейсы</nuxt-link>
+            <nuxt-link exact to="/" class="header__link header__link_bold">GiftCard</nuxt-link>
+            <nuxt-link exact to="/" class="header__link header__link_bold">Новости</nuxt-link>
+            <nuxt-link exact to="/" class="header__link header__link_bold">Отзывы</nuxt-link>
           </div>
 
           <Search class="header__search" />
@@ -94,16 +94,6 @@ export default {
 
 <style lang="sass">
 @import 'theme/_vars'
-.custom-icon
-  &__main
-    display: flex
-    align-items: center
-    justify-content: center
-    width: 36px
-    height: 36px
-    border-radius: 50%
-    background: dark-blue(0.3)
-    cursor: pointer
 .action
   &__icon
     cursor: pointer
@@ -113,10 +103,11 @@ export default {
   padding: 20px 0 28px 0
   &__balance
     margin-right: 16px
+    flex-shrink: 0
   &__search
     margin-right: 24px
-    max-width: 243px
-    margin-left: auto
+    width: 100%
+    margin-left: 43px
   &__actions
     display: flex
     align-items: center
@@ -143,6 +134,8 @@ export default {
     cursor: pointer
     line-height: 20px
     font-size: 14px
+    &:hover
+      color: $gray
     &:not(:last-child)
       margin-right: 24px
     &_bold
@@ -150,6 +143,8 @@ export default {
       color: $white
       font-weight: 600
       font-size: 16px
+      &:hover
+        color: $white
       &:not(:last-child)
         margin-right: 28px
 </style>

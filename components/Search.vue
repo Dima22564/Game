@@ -21,6 +21,7 @@ export default {
       border: 1px solid $gray
       border-radius: 100px
       padding: 8px 45px 8px 20px
+      color: $white
       &::placeholder
         color: $gray
     &__icon

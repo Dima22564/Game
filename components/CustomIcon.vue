@@ -34,6 +34,7 @@ export default {
   @import 'theme/_vars'
   @import 'theme/_mix'
   .custom-icon
+    flex-shrink: 0
     &__main
       display: flex
       align-items: center

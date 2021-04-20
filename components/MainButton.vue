@@ -1,5 +1,5 @@
 <template>
-  <button class="button" :class="'button_' + color">{{ label }}</button>
+  <nuxt-link :to="to" :tag="tag" class="button" :class="'button_' + color">{{ label }}</nuxt-link>
 </template>
 
 <script>
@@ -12,6 +12,14 @@ export default {
     label: {
       type: String,
       required: true
+    },
+    to: {
+      type: String,
+      default: () => ''
+    },
+    tag: {
+      type: String,
+      default: () => 'a'
     }
   }
 }
@@ -38,4 +46,5 @@ export default {
       transition: all 0.1s
       &:hover
         background: rgba(136, 117, 255, 1)
+        color: $white
 </style>
